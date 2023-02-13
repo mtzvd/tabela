@@ -21,9 +21,7 @@ def index():
 
     return template("index", feed_title=feed_title, posts=posts)
 
-@app.route('/static/<file_path:path>')
-def static(file_path):
-    return static_file(file_path, root='./static')
+
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8080)
